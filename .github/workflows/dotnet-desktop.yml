@@ -18,13 +18,14 @@ jobs:
 
     - name: Set working directory
       run: |
-        cd 2048WindowsFormsApp  # Замените на путь к вашему проекту
+        cd ${{ github.workspace }}/2048WindowsFormsApp
       shell: powershell
 
     - name: Build
-      run: msbuild /t:Build /p:Configuration=Release
+      run: msbuild /t:Build /p:Configuration=Release 2048WindowsFormsApp.sln
 
     - name: Test
       run: |
         # Здесь можно добавить команды для запуска тестов, если они есть
         # Пример: .\MyTests.exe
+
