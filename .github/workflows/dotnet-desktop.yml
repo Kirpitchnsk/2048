@@ -18,7 +18,7 @@ jobs:
 
     - name: Set working directory
       run: |
-        cd 2048WindowsFormsApp/  # Замените на путь к вашему проекту
+        cd 2048WindowsFormsApp  # Замените на путь к вашему проекту
       shell: powershell
 
     - name: Build
