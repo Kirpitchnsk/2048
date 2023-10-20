@@ -22,15 +22,7 @@ jobs:
       shell: powershell
 
     - name: Build
-      run: msbuild /t:Build /p:Configuration=Debug
-
-    - name: Test
-      run: |
-        # Здесь можно добавить команды для запуска тестов, если они есть
-        # Пример: .\MyTests.exe
-
-    - name: Build
-      run: msbuild /t:Build /p:Configuration=Debug
+      run: msbuild /t:Build /p:Configuration=Release
 
     - name: Test
       run: |
