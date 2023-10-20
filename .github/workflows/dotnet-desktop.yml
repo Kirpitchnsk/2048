@@ -3,7 +3,7 @@ name: Build and Test Windows Forms App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
