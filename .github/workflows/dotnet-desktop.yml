@@ -16,6 +16,19 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
 
+    - name: Set working directory
+      run: |
+        cd 2048WindowsFormsApp/  # Замените на путь к вашему проекту
+      shell: powershell
+
+    - name: Build
+      run: msbuild /t:Build /p:Configuration=Debug
+
+    - name: Test
+      run: |
+        # Здесь можно добавить команды для запуска тестов, если они есть
+        # Пример: .\MyTests.exe
+
     - name: Build
       run: msbuild /t:Build /p:Configuration=Debug
 
